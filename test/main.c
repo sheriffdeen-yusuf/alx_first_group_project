@@ -1,10 +1,10 @@
 #include <stdio.h>
-#include "main.h"
+#include "../main.h"
 
 int main()
 {
-	char ch = 's';
-	_putchar(ch);
+	_printf("hello %c world \n", 'A');
+	printf("Hello world, %c \n", 'A');
 
 	return (0);
 }

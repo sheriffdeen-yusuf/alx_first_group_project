@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdarg.h>
 
 /**
@@ -7,21 +8,30 @@
 * return: number of args
 */
 
-int printf(const char * const format, ...)
+int _printf(const char * const format, ...)
 {
-	va_list = args;
-	int i, n_number = 0;
-
+	
+	va_list args;
+	int i = 0;
 	va_start(args, format);
 
 	while (format[i] != '\0')
 	{
-		if (_putchar(format[i] != -1)
-			n_number++;
+		if (format[i] != '%')
+			_putchar(format[i]);
+		else
+		{
+			/* format[i] = % */
+			if (format[i + 1] == 'c')
+			{
+				_putchar(va_arg(args, int));
+				i++;
+			}
+		}
 		i++;
 	}
 
 	va_end(args);
 
-	return (n_number);
+	return (0);
 }
