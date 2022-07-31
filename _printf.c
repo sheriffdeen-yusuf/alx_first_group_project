@@ -40,6 +40,11 @@ int _printf(const char * const format, ...)
 					k++;
 				}
 			}
+			else if (format[i + 1] == '%')
+			{
+				i++;
+				_putchar('%');
+			}
 		}
 		i++;
 	}

@@ -3,8 +3,7 @@
 
 int main()
 {
-	_printf("hello %s \n", "musa");
-	printf("Hello world, %c %s \n", 'A', "sheriff");
-
+	_printf("name is: %s, grade is: %c %%\n", "musa", 'A');
+	printf("name is: %s, grade is: %c %%\n", "musa", 'A');
 	return (0);
 }
