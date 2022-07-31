@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdarg.h>
+#include <stddef.h>
 
 /**
 * printf - accepts arguments and display the number of 
@@ -12,7 +13,8 @@ int _printf(const char * const format, ...)
 {
 	
 	va_list args;
-	int i = 0;
+	int i = 0, k = 0;
+	char *str = NULL;
 	va_start(args, format);
 
 	while (format[i] != '\0')
@@ -26,6 +28,17 @@ int _printf(const char * const format, ...)
 			{
 				_putchar(va_arg(args, int));
 				i++;
+			}
+			else if (format[i + 1] == 's')
+			{
+				i++;
+				str = va_arg(args, char *);
+				k = 0;
+				while (str[k] != '\0')
+				{
+					_putchar(str[k]);
+					k++;
+				}
 			}
 		}
 		i++;
