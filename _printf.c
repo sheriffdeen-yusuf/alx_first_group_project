@@ -17,43 +17,40 @@ int _printf(const char * const format, ...)
 	int n_displayed = 0;
 	char *str = NULL;
 	va_start(args, format);
+	int (*func)(va_list);
 
 	while (format[i] != '\0')
 	{
 		if (format[i] != '%')
 		{
-			_printchar(format[i]);
+			_putchar(format[i]);
 			n_displayed++;
 		}
 		else
 		{
-			/* format[i] = % */
-			if (format[i + 1] == 'c')
+			/** This Three lines of code is an improvement of 
+			* the lengthy if else statement that checks a type of
+			* format specifier then calls the appopriate print helper
+			* for the format. 
+			* Now, _select_func is a function pointer to all helper 
+			* function of ssme prototype parameter 'args'. 
+			* it accepts a char, and checks if is a define specifier 
+			* then returns pointer to its print helper function.
+			**/
+
+			func = _select_func(format[i + 1]);
+			if (func != NULL)
 			{
-				_printchar(va_arg(args, int));
-				n_displayed++;
+				n_displayed += func(args);
 				i++;
+				
 			}
-			else if (format[i + 1] == 's')
-			{
-				i++;
-				str = va_arg(args, char *);
-				_printstring(str);
-				/* n_displayed++; */
-			}
-			else if (format[i + 1] == '%')
-			{
-				i++;
-				_printchar('%');
-				n_displayed++;
-			}
-			else if (format[i + 1] == 'd')
-			{
-				i++;
-				num = va_arg(args, int);
-				_printint(num);
-				n_displayed++;
-			}
+		
+				/** remember, n_displayed is not define in
+				* _printstring(args), hence in correct displayed
+				* count ->  n_displayed++; 
+				*/
+			
 		}
 		i++;
 	}
