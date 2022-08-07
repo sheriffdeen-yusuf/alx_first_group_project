@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdarg.h>
 
 /**
 * _printint - accpet a char number @num
@@ -8,9 +9,9 @@
 * return: 0 if success
 */
 
-int _printint(int num)
+int _printint(va_list args)
 {
-
+	int num = va_arg(args, int);
 
 
 
