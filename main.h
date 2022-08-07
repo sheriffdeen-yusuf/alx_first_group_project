@@ -3,7 +3,7 @@
 #include <stdarg.h>
 
 int _putchar(char c);
-int _printf(const char * const format, ...);
+int _printf(const char *format, ...);
 int _printchar(va_list args);
 int _printstring(va_list args);
 int _printint(va_list args);
