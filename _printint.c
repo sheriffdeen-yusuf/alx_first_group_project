@@ -16,5 +16,5 @@ int _printint(va_list args)
 
 
 
-	return (0);
+	return (num);
 }
