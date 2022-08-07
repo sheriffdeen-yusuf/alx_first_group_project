@@ -8,7 +8,7 @@
 * Return: number of args
 */
 
-int _printf(const char * const format, ...)
+int _printf(const char *format, ...)
 {
 	va_list args;
 	int i = 0, num = 0, n_displayed = 0;
@@ -23,6 +23,12 @@ int _printf(const char * const format, ...)
 		{
 			_putchar(format[i]);
 			n_displayed++;
+		}
+		else if (format[i + 1] == '%')
+		{
+			_putchar('%');
+			n_displayed++;
+			 i++;
 		}
 		else
 		{
