@@ -2,15 +2,15 @@
 #include <stdarg.h>
 #include <stddef.h>
 /**
-<<<<<<< HEAD
+
 * _printf - accepts arguments and display the number of
 * arguments passed as parameters.
 * @format: the characters to be printed
-=======
+
 * _printf - prints variable number of arguments
 * @format: the first paramter start
 * @... : variable number of arguments after @format
->>>>>>> 01acc73df56ad628edf2349f4441363a914bffc6
+
 * Return: number of args
 */
 
