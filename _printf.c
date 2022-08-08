@@ -16,7 +16,7 @@
 
 int _printf(const char *format, ...)
 {
-<<<<<<< HEAD
+
 
 	va_list args;
 	int i = 0, num = 0;
@@ -25,10 +25,10 @@ int _printf(const char *format, ...)
 
 	va_start(args, format);
 
-=======
+
 	va_list args;
 	int i = 0,  n_displayed = 0;
->>>>>>> 01acc73df56ad628edf2349f4441363a914bffc6
+
 	int (*func)(va_list);
 
 	va_start(args, format);
@@ -52,13 +52,13 @@ int _printf(const char *format, ...)
 			if (func != NULL)
 			{
 				n_displayed += func(args);
-<<<<<<< HEAD
+
 				i++
 
-=======
+
 				i++;
 			}
->>>>>>> 01acc73df56ad628edf2349f4441363a914bffc6
+
 		}
 		i++;
 	}
