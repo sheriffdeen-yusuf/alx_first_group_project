@@ -2,11 +2,11 @@
 #include <stdarg.h>
 
 /**
-* _printint - accpet a char number @num
+* _printint - accepts args list
 * convert it to integer then prints
-* @num: The number
-* 
-* return: 0 if success
+* @args: The number
+*
+* Return: 0 if success
 */
 
 int _printint(va_list args)
@@ -16,5 +16,5 @@ int _printint(va_list args)
 
 
 
-	return (0);
+	return (num);
 }

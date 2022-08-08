@@ -3,13 +3,14 @@
 
 /**
 * _printchar - accept a argument @c and prints
-* @c: the paramter to be printed
+* @args: the paramter to be printed
 *
-* Return: 1 on succes -1 otherwise
+* Return: prints char to stdout
 */
 
 int _printchar(va_list args)
 {
 	char c = va_arg(args, int);
+
 	return (_putchar(c));
 }
