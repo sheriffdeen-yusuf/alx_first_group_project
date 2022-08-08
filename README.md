@@ -1,1 +1,1 @@
-This project contain the implementation of   
+This project
