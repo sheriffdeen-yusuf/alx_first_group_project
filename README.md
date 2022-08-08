@@ -1,2 +1,1 @@
-This project contain the implementation of _printf function from scratch
-.
+This is a read me file.
