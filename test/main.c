@@ -3,12 +3,16 @@
 
 int main()
 {
-	int n = 0;
-	n = _printf("name is: %s, grade is %c, %s %% \n", "lekenzd", 'D', "40");
-	printf("n: %d\n", n);
+	int len;
+   	int len2;
 
-	
-	n = printf("name is: %s, grade is %c, %d %% \n", "lekenzd", 'D', 40);
-	printf("n: %d\n", n);
+	_printf("Character:[%c]\n", 'H');
+   	 printf("Character:[%c]\n", 'H');
+	_printf("String:[%s]\n", "I am a string !");
+    	printf("String:[%s]\n", "I am a string !");
+	len = _printf("Percent:[%%]\n");
+    	len2 = printf("Percent:[%%]\n");
+    	_printf("Len:[%d]\n", len);
+    	printf("Len:[%d]\n", len2);;
 	return (0);
 }
